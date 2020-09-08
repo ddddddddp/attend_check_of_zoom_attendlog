@@ -1,0 +1,23 @@
+attend_file = open("attendlog_0908.csv", "w", encoding="utf8")
+
+number = 1
+nstudent = 3
+studentID = "202ENG06" #갯수가 가변적일 때는 변수이름앞에 *
+name = "이아론"
+startingtime = 1235
+time = 65
+
+#check all student
+for number in range(1, nstudent):
+#check the time and startingtime
+    if time >= 65 and startingtime <= 1235 :
+        print("{0}\t{1}\t출석".format(name, studentID))
+    elif time <= 65 :
+        print ("{0}\t{1}\t지각".format(name, studentID))
+    else :
+        print ("{0}\t{1}\t결석".format(name, studentID))
+
+
+attend_file.colse()
+    
+
